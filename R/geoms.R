@@ -38,7 +38,8 @@ GeomNotchedBorder <- ggplot2::ggproto("GeomNotchedBorder", ggplot2::GeomPath,
                                  notched_border <- make_notched_border(params$w, params$h)
                                  data <- dplyr::group_by(data, plate)
                                  data <- dplyr::filter(data, dplyr::row_number() == 1)
-                                 data <- tidyr::crossing(data, notched_border)
+                                 data <- tidyr::crossing(notched_border, data)
+                                 data <- dplyr::arrange(data, p_order)
                                  dplyr::ungroup(data)
                              }
 

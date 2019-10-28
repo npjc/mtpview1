@@ -66,7 +66,8 @@ make_notched_border <- function(w, h) {
               start_point)
     tibble::tibble(
         x = unlist(lapply(l, `[`, 1)),
-        y = unlist(lapply(l, `[`, 2))
+        y = unlist(lapply(l, `[`, 2)),
+        p_order = 1:7
     )
 }
 

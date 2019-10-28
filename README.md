@@ -19,6 +19,7 @@ Easily view your microtitre plate data
 View your data in place interactively with `mtp_view()`.
 
 ``` r
+library(tidyverse)
 # mtp_example1 %>% mtp_view()
 # mtp_example1 %>% mtp_view(fillVar = "drug")
 mtp_example1 %>% mtp_view(fillVar = "drug", fillOpacityVar = "conc")
